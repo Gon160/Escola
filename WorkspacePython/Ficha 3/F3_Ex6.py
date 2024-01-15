@@ -12,7 +12,6 @@
 
 Nomes, SAtual, SFuturo, MAtual ,MFuturo = [], [], [], 0, 0
 Conta, j = 0, 0
-a = (Nomes , SAtual , SFuturo)
 
 while True:
     Nome = str(input("Diga o nome do funcionário (ZZZ para terminar): "))
@@ -31,27 +30,20 @@ while True:
     Conta += 1
 
 for i in range(0, Conta, 1):
-        MAtual = MAtual + SAtual[i]
+    MAtual = MAtual + SAtual[i]
 
 for i in range(0, Conta, 1):
-    if i == 0:
-        SAtual.append(0)
-        SFuturo.append(0)
-    elif SAtual[i] >= 0 and SAtual[i] <= 500:
+    if 0 < SAtual[i] <= 500:
         SFuturo.append(SAtual[i] + SAtual[i] * 0.1)
-        print(SFuturo)
-    elif SAtual[i] >= 501 and SAtual[i] <= 800:
+    elif 501 <= SAtual[i] <= 800:
         SFuturo.append(SAtual[i] + SAtual[i] * 0.05)
     else:
         SFuturo.append(SAtual[i])
-    MFuturo = MFuturo + SAtual[i]
-
-
-#print("Nome", end="")
+    MFuturo = MFuturo + SFuturo[i]
 
 print("Nomes\t\tSAtual\t\tSFuturo")
 for i in range(Conta):
-    print("{}{:14.2f}{:14.2f}".format(Nomes[i], SAtual[i], SFuturo[i]))
+    print("{:5}{:14.2f}{:14.2f}".format(Nomes[i], SAtual[i], SFuturo[i]))
 
 print("MAtual: {:.2f}".format(MAtual))
 print("MFuturo: {:.2f}".format(MFuturo))
