@@ -10,8 +10,9 @@
     #e. Ler o nome e o salário atual do próximo funcionário
 #5. Imprimir as massas salariais se o contador de funcionário for maior do que zero
 
-Nomes, SAtual, SFuturo,MAtual ,MFuturo = [], [], [], [], []
-Conta = 0
+Nomes, SAtual, SFuturo, MAtual ,MFuturo = [], [], [], 0, 0
+Conta, j = 0, 0
+a = (Nomes , SAtual , SFuturo)
 
 while True:
     Nome = str(input("Diga o nome do funcionário (ZZZ para terminar): "))
@@ -30,32 +31,27 @@ while True:
     Conta += 1
 
 for i in range(0, Conta, 1):
-    print(f'SAtual:  {SAtual[i]}')
-
-for i in range(0, Conta, 1):
-    if i == 0:
-        MAtual.append(0)
-    else:
-        MAtual.append(MAtual[i-1] + SAtual[i])
-    print(f'MAtual:  {MAtual[i]}')
+        MAtual = MAtual + SAtual[i]
 
 for i in range(0, Conta, 1):
     if i == 0:
         SAtual.append(0)
         SFuturo.append(0)
-        MFuturo.append(0)
     elif SAtual[i] >= 0 and SAtual[i] <= 500:
         SFuturo.append(SAtual[i] + SAtual[i] * 0.1)
+        print(SFuturo)
     elif SAtual[i] >= 501 and SAtual[i] <= 800:
         SFuturo.append(SAtual[i] + SAtual[i] * 0.05)
     else:
         SFuturo.append(SAtual[i])
-    print(f'SFuturo:  {SFuturo[i]}')
-    MFuturo.append(MFuturo[i-1] + SAtual[i])
-    print(f'MFuturo:  {MFuturo[i]}')
+    MFuturo = MFuturo + SAtual[i]
+
 
 #print("Nome", end="")
-#for i in range(1, Conta+1, 1):
-#    print(f'{Nome}')
-#    for N in 4:
-#        print()
+
+print("Nomes\t\tSAtual\t\tSFuturo")
+for i in range(Conta):
+    print("{}{:14.2f}{:14.2f}".format(Nomes[i], SAtual[i], SFuturo[i]))
+
+print("MAtual: {:.2f}".format(MAtual))
+print("MFuturo: {:.2f}".format(MFuturo))
