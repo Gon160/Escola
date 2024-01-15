@@ -30,22 +30,29 @@ while True:
     Conta += 1
 
 for i in range(0, Conta, 1):
-    MAtual[i] = MAtual[i] + SAtual[i]
-    print(f'MFuturo:  {MAtual[i]}')
+    print(f'SAtual:  {SAtual[i]}')
 
 for i in range(0, Conta, 1):
-    if SAtual[i] >= 0 and SAtual[i] <= 500:
-        SFuturo[i] = SAtual[i] * 0.1
-        MFuturo[i] = MFuturo[i-1] + SAtual[i]
-        print(f'MFuturo:  {MFuturo[i]}')
-    elif SAtual[i] >= 501 and SAtual[i] <= 800:
-        SFuturo[i] = SAtual[i] * 0.05
-        MFuturo[i] = MFuturo[i-1] + SAtual[i]
-        print(f'MFuturo:  {MFuturo[i]}')
+    if i == 0:
+        MAtual.append(0)
     else:
-        SFuturo[i] = SAtual[i]
-        MFuturo[i] = MFuturo[i-1] + SAtual[i]
-        print(f'MFuturo:  {MFuturo[i]}')
+        MAtual.append(MAtual[i-1] + SAtual[i])
+    print(f'MAtual:  {MAtual[i]}')
+
+for i in range(0, Conta, 1):
+    if i == 0:
+        SAtual.append(0)
+        SFuturo.append(0)
+        MFuturo.append(0)
+    elif SAtual[i] >= 0 and SAtual[i] <= 500:
+        SFuturo.append(SAtual[i] + SAtual[i] * 0.1)
+    elif SAtual[i] >= 501 and SAtual[i] <= 800:
+        SFuturo.append(SAtual[i] + SAtual[i] * 0.05)
+    else:
+        SFuturo.append(SAtual[i])
+    print(f'SFuturo:  {SFuturo[i]}')
+    MFuturo.append(MFuturo[i-1] + SAtual[i])
+    print(f'MFuturo:  {MFuturo[i]}')
 
 #print("Nome", end="")
 #for i in range(1, Conta+1, 1):
