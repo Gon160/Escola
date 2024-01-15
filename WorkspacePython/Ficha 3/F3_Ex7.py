@@ -1,3 +1,11 @@
+#Elabore um programa que imprima uma lista de pré-seleção dos candidatos admitidos ao
+#concurso de provimento de uma vaga para determinado cargo de uma empresa. Os candidatos
+#que não satisfazem um dos seguintes requisitos são eliminados:
+#• Classificação final de estágio superior a 13 valores;
+#• Ter conhecimentos de inglês;
+#• Ter experiência profissional internacional.
+#A lista deverá apresentar a percentagem de candidatos pré-selecionados.
+
 Nomes, sit = [], []
 Conta = 0
 while True:
@@ -10,8 +18,8 @@ while True:
     Ingles = str(input("Fluente em ingles (S/N): "))
     Internacional = str(input("Carreira internacional (S/N): "))
     if Nota > 13:
-        if Ingles == "S":
-            if Internacional == "S":
+        if Ingles.upper() == "S" or Ingles.upper() == "SIM":
+            if Internacional.upper() == "S" or Internacional.upper() == "SIM":
                 Obs = "Selecionado"
                 sit.append(Obs)
             else:
@@ -23,3 +31,7 @@ while True:
     else:
         Obs = "Eliminado"
         sit.append(Obs)
+
+for i in range(Conta):
+    print(f"{Nomes[i]} ", end = "")
+    print(sit[i])
