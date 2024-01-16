@@ -20,18 +20,18 @@ while True:
     if Nota > 13:
         if Ingles.upper() == "S" or Ingles.upper() == "SIM":
             if Internacional.upper() == "S" or Internacional.upper() == "SIM":
-                Obs = "Selecionado"
+                Obs = "Selecionado(a)"
                 sit.append(Obs)
             else:
-                Obs = "Eliminado"
+                Obs = "Eliminado(a)"
                 sit.append(Obs)
         else:
-            Obs = "Eliminado"
+            Obs = "Eliminado(a)"
             sit.append(Obs)
     else:
-        Obs = "Eliminado"
+        Obs = "Eliminado(a)"
         sit.append(Obs)
 
+print("\nNome\t\tObservação")
 for i in range(Conta):
-    print(f"{Nomes[i]} ", end = "")
-    print(sit[i])
+    print("{:12}{}".format(Nomes[i], sit[i]))
