@@ -9,7 +9,7 @@
 # 4. Imprimir o contador de palavras
 Contar = 0
 while True:
-    Frase = str(input("Diga uma fraze: "))
+    Frase = str(input("Diga uma frase: "))
     if Frase.upper() == "ZZZ":
         break
     for i in Frase:
