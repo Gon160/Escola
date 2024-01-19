@@ -24,10 +24,10 @@ while True:
         break
     JogadoresL.append(Nome)
 
-if len(JogadoresP) % 2 != 0 or len(JogadoresP) < len(JogadoresL):
+if len(JogadoresP) < len(JogadoresL):
     JogadoresP.append("Ricardo")
 
-if len(JogadoresL) % 2 != 0 or len(JogadoresL) < len(JogadoresP):
+if len(JogadoresL) < len(JogadoresP):
     JogadoresL.append("Ricardo")
 
 for i in range(0, len(JogadoresL)):
