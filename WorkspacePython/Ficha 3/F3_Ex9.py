@@ -15,4 +15,4 @@ while True:
     for i in Frase:
         if i == " " or i == ".":
             Contar += 1
-    print(f'A fraze "{Frase}" tem {Contar} palavras')
+    print(f'A frase "{Frase}" tem {Contar} palavras')
