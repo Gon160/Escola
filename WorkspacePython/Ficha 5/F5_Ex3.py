@@ -8,32 +8,65 @@ Menus = {
     4: {"Desc": "Galão com tosta mista", "PU": 3.5}
 }
 
+print("===============Menus Disponíveis===============")
 for NMenu, Menu in Menus.items():
-    print(f"{NMenu}. {Menu['Desc']}, {Menu['PU']}€")
+    print(f"{NMenu}. {Menu['Desc']:37} {Menu['PU']:.2f} €")
 print()
+
+#while True:
+#    op = int(input("Escolha um dos menus (1, 2, 3, 4): "))
+#    match op:
+#        case 1:
+#            Qnt = int(input("Quantos menus quer? "))
+#            Total = Menus[op]['PU'] * Qnt
+#            print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
+#            break
+#        case 2:
+#            Qnt = int(input("Quantos menus quer? "))
+#            Total = Menus[op]['PU'] * Qnt
+#            print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
+#            break
+#        case 3:
+#            Qnt = int(input("Quantos menus quer? "))
+#            Total = Menus[op]['PU'] * Qnt
+#            print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
+#            break
+#        case 4:
+#            Qnt = int(input("Quantos menus quer? "))
+#            Total = Menus[op]['PU'] * Qnt
+#            print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
+#            break
+#        case _:
+#            print("O menu inserido não existe volte a tentar.")
 
 while True:
     op = int(input("Escolha um dos menus (1, 2, 3, 4): "))
-    match op:
-        case 1:
-            Qnt = int(input("Quantos menus quer? "))
-            Total = Menus[op]['PU'] * Qnt
-            print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
-            break
-        case 2:
-            Qnt = int(input("Quantos menus quer? "))
-            Total = Menus[op]['PU'] * Qnt
-            print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
-            break
-        case 3:
-            Qnt = int(input("Quantos menus quer? "))
-            Total = Menus[op]['PU'] * Qnt
-            print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
-            break
-        case 4:
-            Qnt = int(input("Quantos menus quer? "))
-            Total = Menus[op]['PU'] * Qnt
-            print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
-            break
-        case _:
-            print("O menu inserido não existe volte a tentar novamente.")
+    if op == 1 or op == 2 or op == 3 or op == 4:
+        Qnt = int(input("Quantos menus quer? "))
+        Total = Menus[op]['PU'] * Qnt
+        match op:
+            case 1:
+                print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
+                break
+            case 2:
+                print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
+                break
+            case 3:
+                print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
+                break
+            case 4:
+                print(f"{Qnt} menus {Menus[op]['Desc']} = {Total}€")
+                break
+    else:
+        print("O menu inserido não existe volte a tentar.")
+
+
+#while True:
+#    op = int(input("Escolha um dos menus (1, 2, 3, 4): "))
+#    if op == 1 or op == 2 or op == 3 or op == 4:
+#        Qnt = int(input("Quantos menus quer? "))
+#        Total = Menus[op]['PU'] * Qnt
+#        break
+#    else:
+#        print("O menu inserido não existe volte a tentar.")
+#print(f"{Qnt} menus {Menus[op]['Desc']} = {Total:.2f}€")
