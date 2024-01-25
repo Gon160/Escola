@@ -30,7 +30,7 @@ while True:
     Conta += 1
 
 for i in range(0, Conta, 1):
-    MAtual = MAtual + SAtual[i]
+    MAtual += SAtual[i]
 
 for i in range(0, Conta, 1):
     if 0 < SAtual[i] <= 500:
@@ -39,7 +39,7 @@ for i in range(0, Conta, 1):
         SFuturo.append(SAtual[i] + SAtual[i] * 0.05)
     else:
         SFuturo.append(SAtual[i])
-    MFuturo = MFuturo + SFuturo[i]
+    MFuturo += SFuturo[i]
 
 print("Nomes\t\tSAtual\t\tSFuturo")
 for i in range(Conta):
