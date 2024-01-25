@@ -7,6 +7,7 @@ Menus = {
     3: {"Desc": "Meia de leite e tosta com manteiga", "PU": 3},
     4: {"Desc": "Galão com tosta mista", "PU": 3.5}
 }
+
 print("===============Menus Disponíveis===============")
 for NMenu, Menu in Menus.items():
-    print(f"{NMenu}. {Menu['Desc']:37} {Menu['PU']} €")
+    print(f"{NMenu}. {Menu['Desc']:37} {Menu['PU']:.2f} €")
