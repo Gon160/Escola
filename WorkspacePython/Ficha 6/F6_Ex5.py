@@ -51,6 +51,28 @@ def readNumber():
             print("Valor errado volte a tentar")
 
 
+def Exit():
+    print("Programa finalizado")
+
+
+def Maior():
+    if m > n:
+        print("O maior valor é: ", m)
+    else:
+        print("O maior valor é: ", n)
+
+
+def Menor():
+    if m < n:
+        print("O menor valor é: ", m)
+    else:
+        print("O menor valor é: ", n)
+
+
+def Media():
+    print("A mendia dos valores é: ", (m + n) / 2)
+
+
 def menu():
     print("1 - Mostar o valor maus alto.")
     print("2 - Mostrar o valor mais baixo.")
@@ -59,21 +81,15 @@ def menu():
     while True:
         op = int(input())
         match op:
-            case 1:
-                if m > n:
-                    print("O maior valor é: ", m)
-                else:
-                    print("O maior valor é: ", n)
-            case 2:
-                if m < n:
-                    print("O menor valor é: ", m)
-                else:
-                    print("O menor valor é: ", n)
-            case 3:
-                print("A mendia dos valores é: ", (m+n)/2)
-            case 4:
-                print("Programa finalizado")
+            case 0:
+                Exit()
                 break
+            case 1:
+                Maior()
+            case 2:
+                Menor()
+            case 3:
+                Media()
             case _:
                 print("Opção invalida")
 
