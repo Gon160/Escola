@@ -1,3 +1,9 @@
+#Escreva um programa que peça ao utilizador um número inteiro n entre 1 e 100 inclusive
+#(valide a entrada de dados). O programa deve mostrar no ecrã o resultado de:
+#Sum(i=0)->(2 + i2) = (2+02) + (2+12) + (2+22) + ... + (2+n2)
+#Este valor deve ser calculado numa função com o seguinte protótipo:
+#def sum(n) que devolve o resultado pretendido.
+
 def soma(x):
     valor = 0
     for i in range(x + 1):
