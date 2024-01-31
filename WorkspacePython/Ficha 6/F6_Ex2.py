@@ -11,6 +11,8 @@ def readData():
         if 1 <= x <= 121:
             return x
             break
+        else:
+            print("Valor invalido!")
 
 
 def Multiplo3(x):
