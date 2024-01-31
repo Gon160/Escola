@@ -15,20 +15,37 @@
 
 import math
 
+m, n = None, None
 
-def readNumber(m):
-    while -100 <= m <= 100:
+
+def readNumber():
+    global m
+    global n
+    while True:
         m = int(input("Insira um numero entre -100 e 100: "))
         if -100 <= m <= 100:
-            return m
             break
         else:
             print("Valor errado volte a tentar")
 
+    while True:
+        n = int(input("Insira um numero entre -100 e 100: "))
+        if -100 <= n <= 100:
+            break
+        else:
+            print("Valor errado volte a tentar")
+
+    return m, n
+
 
 def read():
-        m = input("Insira um numero ou uma letra: ")
-        n = input("Insira um numero ou uma letra")
+    global m
+    global n
+    m = str(input("Insira um numero ou uma letra: "))
+    print("Oi eu sou o M: ", m)
+    n = str(input("Insira um numero ou uma letra: "))
+    print("Oi eu sou o N: ", n)
+    return m, n
 
 def Exit():
     print("Programa finalizado")
@@ -76,6 +93,46 @@ def triangulo():
         print("Não é possivel realizar esta operação pois um dos sinais é negativo")
 
 
+def isNumber():
+    if 48 <= ord(m) <= 57:
+        print("n m")
+        print("0")
+    else:
+        print("n m")
+        print("1")
+
+    if 48 <= ord(n) <= 57:
+        print("n n")
+        print("0")
+    else:
+        print("n n")
+        print("1")
+
+def isAlpha():
+    if 65 <= ord(m) <= 90 or 97 <= ord(m) <= 122:
+        print("a m")
+        print("0")
+    else:
+        print("a m")
+        print("1")
+
+    if 65 <= ord(n) <= 90 or 97 <= ord(n) <= 122:
+        print("a n")
+        print("0")
+    else:
+        print("a n")
+        print("1")
+
+
+def isNumberOrAlpha():
+    if 65 <= ord(m) <= 90 or 97 <= ord(m) <= 122 or 65 <= ord(n) <= 90 or 97 <= ord(n) <= 122:
+        print("Oi sou do sla")
+        print("1")
+    else:
+        print("Oi sou")
+        print("0")
+
+
 def menu():
     print("1 - Mostar o valor maus alto.")
     print("2 - Mostrar o valor mais baixo.")
@@ -91,26 +148,44 @@ def menu():
                 Exit()
                 break
             case 1:
-                m = readNumber()
-                n = readNumber()
+                readNumber()
                 Maior()
+                menu()
             case 2:
                 readNumber()
                 Menor()
+                menu()
             case 3:
                 readNumber()
                 Media()
+                menu()
             case 4:
                 readNumber()
                 sinais()
+                menu()
             case 5:
                 readNumber()
                 somaModulos()
+                menu()
             case 6:
                 readNumber()
                 triangulo()
+                menu()
+            case 7:
+                read()
+                isNumber()
+                menu()
+            case 8:
+                read()
+                isAlpha()
+                menu()
+            case 9:
+                read()
+                isNumberOrAlpha()
+                menu()
             case _:
                 print("Opção invalida")
+        break
 
 
 menu()
