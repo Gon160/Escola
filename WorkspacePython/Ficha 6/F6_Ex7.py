@@ -1,4 +1,4 @@
-# Acrescente um menu ao programa do exercício 5, de forma a ficarem disponíveis as
+ # Acrescente um menu ao programa do exercício 5, de forma a ficarem disponíveis as
 # operações programadas nos exercícios 5 e 6 e também as que são sugeridas de seguida.
 # Deverá implementar todas as funcionalidades em forma de funções com os seguintes
 # protótipos). O aviso mostrado deve ser adequado a cada caso:
@@ -16,8 +16,8 @@
 import math
 
 
-def readNumber():
-    while True:
+def readNumber(m):
+    while -100 <= m <= 100:
         m = int(input("Insira um numero entre -100 e 100: "))
         if -100 <= m <= 100:
             return m
@@ -25,6 +25,10 @@ def readNumber():
         else:
             print("Valor errado volte a tentar")
 
+
+def read():
+        m = input("Insira um numero ou uma letra: ")
+        n = input("Insira um numero ou uma letra")
 
 def Exit():
     print("Programa finalizado")
@@ -87,21 +91,26 @@ def menu():
                 Exit()
                 break
             case 1:
+                m = readNumber()
+                n = readNumber()
                 Maior()
             case 2:
+                readNumber()
                 Menor()
             case 3:
+                readNumber()
                 Media()
             case 4:
+                readNumber()
                 sinais()
             case 5:
+                readNumber()
                 somaModulos()
             case 6:
+                readNumber()
                 triangulo()
             case _:
                 print("Opção invalida")
 
 
-m = readNumber()
-n = readNumber()
 menu()
