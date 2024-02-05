@@ -15,7 +15,7 @@ def readData():
 
 def fromAtoINPUT(x):
     for i in range(65, ord(x)+1):
-        print(chr(i).upper())
+        print(chr(i).upper(), end=' ')
 
 x =readData()
 fromAtoINPUT(x)
