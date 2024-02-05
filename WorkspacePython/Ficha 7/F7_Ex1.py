@@ -25,7 +25,7 @@ def inserirMatriz():
                 else:
                     print("Numero invalido!")
         Matriz.append(Linha)
-
+    return Matriz()
 
 
 def mostrarMatriz():
