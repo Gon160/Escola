@@ -79,9 +79,7 @@ def sinais():
 
 
 def somaModulos():
-    soma = m + n
-    if soma < 0:
-        soma *= -1
+    soma = abs(m) + abs(n)
     print("A soma dos valores com o modulo é: ", soma)
 
 
@@ -95,41 +93,31 @@ def triangulo():
 
 def isNumber():
     if 48 <= ord(m) <= 57:
-        print("n m")
-        print("0")
-    else:
-        print("n m")
         print("1")
+    else:
+        print("0")
 
     if 48 <= ord(n) <= 57:
-        print("n n")
-        print("0")
-    else:
-        print("n n")
         print("1")
+    else:
+        print("0")
 
 def isAlpha():
     if 65 <= ord(m) <= 90 or 97 <= ord(m) <= 122:
-        print("a m")
-        print("0")
-    else:
-        print("a m")
         print("1")
+    else:
+        print("0")
 
     if 65 <= ord(n) <= 90 or 97 <= ord(n) <= 122:
-        print("a n")
-        print("0")
-    else:
-        print("a n")
         print("1")
+    else:
+        print("0")
 
 
 def isNumberOrAlpha():
-    if 65 <= ord(m) <= 90 or 97 <= ord(m) <= 122 or 65 <= ord(n) <= 90 or 97 <= ord(n) <= 122:
-        print("Oi sou do sla")
+    if isNumber() or isAlpha():
         print("1")
     else:
-        print("Oi sou")
         print("0")
 
 
@@ -140,6 +128,9 @@ def menu():
     print("4 - Mostrar se os vlores têm o mesmo sinal")
     print("5 - Mostrar a soma dos módulos dos dois números")
     print("6 - Mostrar a hipotenusa do triangulo")
+    print("7 - ")
+    print("8 - ")
+    print("9 - ")
     print("0 - Sair.")
     while True:
         op = int(input())
