@@ -12,6 +12,7 @@
 # dimensões q x p e o valor em cada posição (i,j) é dado por B(i,j) = A(j,i). I.e., a matriz
 # transposta troca os valores das linhas pelos das colunas e vice-versa.
 
+
 def inserirMatriz():
     Matriz = []
     for i in range(2):
@@ -25,9 +26,27 @@ def inserirMatriz():
                 else:
                     print("Numero invalido!")
         Matriz.append(Linha)
-    return Matriz()
+    return Matriz
 
 
-def mostrarMatriz():
+def mostrarMatriz(matriz):
+    for Linha in matriz:
+        for x in Linha:
+            print(x, end=" ")
+        print()
 
-inserirMatriz()
+
+def transpostaMatriz(matriz):
+    for i in range(len(matriz[0])):
+        for j in range(len(matriz)):
+            print(matriz[j][i], end=" ")
+        print()
+
+
+MatrizA = inserirMatriz()
+print()
+print("A matriz")
+mostrarMatriz(MatrizA)
+print()
+print("A transposta da matriz")
+transpostaMatriz(MatrizA)
