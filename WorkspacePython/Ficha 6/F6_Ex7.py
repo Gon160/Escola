@@ -128,9 +128,9 @@ def menu():
     print("4 - Mostrar se os vlores têm o mesmo sinal")
     print("5 - Mostrar a soma dos módulos dos dois números")
     print("6 - Mostrar a hipotenusa do triangulo")
-    print("7 - ")
-    print("8 - ")
-    print("9 - ")
+    print("7 - Se for um número")
+    print("8 - Se for uma letra")
+    print("9 - Se for número ou letra")
     print("0 - Sair.")
     while True:
         op = int(input())
