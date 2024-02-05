@@ -51,9 +51,7 @@ def sinais():
 
 
 def somaModulos():
-    soma = m + n
-    if soma < 0:
-        soma *= -1
+    soma = abs(m) + abs(n)
     print("A soma dos valores com o modulo é: ", soma)
 
 
