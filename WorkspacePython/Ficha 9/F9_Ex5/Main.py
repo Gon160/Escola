@@ -65,7 +65,6 @@ while True:
         if existente == 0:
             print(f"O aluno pretendido não existe")
 
-    # trocar o aluno para professor
     elif Op == 5:
         for professor in listaProfessores:
             print(f"Informações do professor: {professor.nome}\n"
@@ -97,7 +96,7 @@ while True:
         print("Nome dos professores: ")
         for professor in listaProfessores:
             print(f"{professor.nome}")
-        nomeEscolhido = input("Digite o nome do aluno que pretende excluir: ")
+        nomeEscolhido = input("Digite o nome do professor que pretende excluir: ")
         existente = 0
         for professor in listaProfessores:
             if nomeEscolhido == professor.nome:
@@ -107,7 +106,6 @@ while True:
         if existente == 0:
             print(f"O professor pretendido não existe")
 
-    # trocar o aluno para curso
     elif Op == 9:
         for curso in listaCursos:
             print(f"Informações do curso: {curso.nome}\n"
