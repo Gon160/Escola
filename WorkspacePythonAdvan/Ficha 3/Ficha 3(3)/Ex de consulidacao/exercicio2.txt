@@ -1,0 +1,5 @@
+Carro $ 200.000,00
+Cadeira $ 1000,00
+Moto $ 33000,00
+Geladeira $ 2000,00
+Armário $ 1500,00
